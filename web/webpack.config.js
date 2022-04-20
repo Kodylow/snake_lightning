@@ -1,5 +1,6 @@
 const path = require("path");
 const CopyWebPackPlugin = require("copy-webpack-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   entry: "./index.js",
@@ -12,5 +13,7 @@ module.exports = {
     new CopyWebPackPlugin({
       patterns: [{ from: "./index.html", to: "./" }],
     }),
+    new NodePolyfillPlugin(),
   ],
+  target: "web",
 };
