@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./index.js"></script>
+    <h1>Sup</h1>
+  </body>
+</html>
+
+<!-- webassembly has 4 types: i32, i64, f32, f64 -->
+<!-- you can create memory in WASM and export it to JS -->
+<!-- OR you can create memory in JS and import it to WASM -->
+
+<!-- (module (import "console" "log" (func $log)) (import "console" "error" (func
+$error)) (memory $mem 1) (data (i32.const 0) "Hi") (func $sum (param $a i32)
+(param $b i32) (result i32) call $log call $error local.get $a local.get $b
+i32.add ) (export "mem" (memory $mem)) (export "sum" (func $sum)) ) -->
